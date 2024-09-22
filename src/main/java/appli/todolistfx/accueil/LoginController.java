@@ -9,9 +9,6 @@ import javafx.scene.control.TextField;
 public class LoginController {
 
     @FXML
-    private Label buttonConnexion;
-
-    @FXML
     private TextField email;
 
     @FXML
@@ -27,15 +24,29 @@ public class LoginController {
     private Label welcomeText11;
 
     @FXML
-    private Label welcomeText112;
+    void affichermail(ActionEvent event) {
+        System.out.println(email.getText());
+    }
 
     @FXML
-    private Label welcomeText113;
+    void affichermdp(ActionEvent event) {
+        System.out.println(motDePasse.getText());
+
+    }
 
     @FXML
-    void connextion(ActionEvent event) {
+    void connexion(ActionEvent event) {
+        System.out.println("Connexion");
+    }
 
+    @FXML
+    void inscription(ActionEvent event) {
+        System.out.println("Inscription");
+    }
 
+    @FXML
+    void mdpOublie(ActionEvent event) {
+        System.out.println("Mot de passe oublié");
     }
 
 }

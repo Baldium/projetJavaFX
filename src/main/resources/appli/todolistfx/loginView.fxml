@@ -14,11 +14,10 @@
 
         <Label fx:id="welcomeText" text="bienvenue !" />
    <Label fx:id="welcomeText1" layoutX="74.0" layoutY="30.0" text="Votre Email :" />
-   <TextField fx:id="email" />
+   <TextField fx:id="email" onAction="#affichermail" />
    <Label fx:id="welcomeText11" layoutX="71.0" layoutY="67.0" text="Votre mot de passe :" />
-   <PasswordField fx:id="motDePasse" />
-   <Button mnemonicParsing="false" onAction="#connextion" text="Button" />
-   <Label fx:id="buttonConnexion" layoutX="50.0" layoutY="149.0" text="Connexion" />
-   <Label fx:id="welcomeText112" layoutX="50.0" layoutY="149.0" text="Mot de passe oublié" />
-   <Label fx:id="welcomeText113" layoutX="50.0" layoutY="149.0" text="Inscription" />
+   <PasswordField fx:id="motDePasse" onAction="#affichermdp" />
+   <Button layoutX="79.0" layoutY="231.0" mnemonicParsing="false" onAction="#connexion" text="Connexion" />
+   <Button layoutX="68.0" layoutY="276.0" mnemonicParsing="false" onAction="#mdpOublie" text="Mot de Passe Oublié" />
+   <Button layoutX="68.0" layoutY="321.0" mnemonicParsing="false" onAction="#inscription" text="Inscription" />
 </VBox>
