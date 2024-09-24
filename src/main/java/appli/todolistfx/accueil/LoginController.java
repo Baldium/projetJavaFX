@@ -13,6 +13,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import static appli.todolistfx.StartApplication.changeScene;
+
 public class LoginController {
 
     @FXML
@@ -30,18 +32,7 @@ public class LoginController {
     @FXML
     private Label welcomeText11;
 
-    static void changeScene(String viewAmettre) throws IOException {
 
-        FXMLLoader fxmlLoader = new FXMLLoader(StartApplication.class.getResource(viewAmettre));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        Stage stage = new Stage();
-        stage.setTitle(viewAmettre);
-        stage.setScene(scene);
-        stage.show();
-
-
-
-    }
 
     @FXML
     void affichermail(ActionEvent event) {

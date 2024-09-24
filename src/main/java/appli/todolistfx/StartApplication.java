@@ -17,6 +17,22 @@ public class StartApplication extends Application {
         stage.show();
     }
 
+
+    public static void changeScene(String viewAmettre) throws IOException {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(StartApplication.class.getResource(viewAmettre));
+        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        Stage stage = new Stage();
+        stage.setTitle(viewAmettre);
+        stage.setScene(scene);
+        stage.show();
+
+
+
+    }
+
+
+
     public static void main(String[] args) {
         launch();
     }

@@ -9,7 +9,8 @@ import javafx.scene.control.TextField;
 
 import java.io.IOException;
 
-import static appli.todolistfx.accueil.LoginController.changeScene;
+import static appli.todolistfx.StartApplication.changeScene;
+
 
 public class InscriptionController {
 
