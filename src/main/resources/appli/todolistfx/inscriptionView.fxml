@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.todolistfx.accueil.InscriptionController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label fx:id="inscriptionText" text="Inscription">
+      <font>
+         <Font size="22.0" />
+      </font></Label>
+    <Label fx:id="inscriptionText1" layoutX="74.0" layoutY="30.0" text="Nom" />
+    <TextField fx:id="nom" onAction="#afficherNom" />
+    <Label fx:id="inscriptionText2" layoutX="71.0" layoutY="67.0" text="Prenom" />
+   <TextField fx:id="prenom" layoutX="30.0" layoutY="366.0" onAction="#afficherPrenom" />
+   <Label fx:id="inscriptionText3" layoutX="84.0" layoutY="149.0" text="Email" />
+   <TextField fx:id="email" layoutX="30.0" layoutY="104.0" onAction="#afficherMail" />
+   <Label fx:id="inscriptionText4" layoutX="91.0" layoutY="67.0" text="mot de passe" />
+    <PasswordField fx:id="motDePasse" onAction="#afficherMdp" />
+   <Label fx:id="inscriptionText5" layoutX="69.0" layoutY="493.0" text="Confirmer le mot de passe" />
+   <PasswordField fx:id="confirmerMdp" layoutX="30.0" layoutY="365.0" onAction="#afficherConfirmerMdp" />
+    <Button fx:id="inscriptionButton" layoutX="68.0" layoutY="321.0" mnemonicParsing="false" onAction="#inscription" text="Inscription" />
+    <Button fx:id="returnButton" layoutX="68.0" layoutY="276.0" mnemonicParsing="false" onAction="#mdpOublie" text="Retour" />
+</VBox>
