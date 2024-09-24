@@ -7,6 +7,10 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
+
+import static appli.todolistfx.accueil.LoginController.changeScene;
+
 public class InscriptionController {
 
     @FXML
@@ -80,6 +84,16 @@ public class InscriptionController {
 
     @FXML
     void mdpOublie(ActionEvent event) {
+
+    }
+
+    @FXML
+    void retour(ActionEvent event) {
+        try {
+            changeScene("loginView.fxml");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
