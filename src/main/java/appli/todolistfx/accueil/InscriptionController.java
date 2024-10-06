@@ -1,4 +1,8 @@
 package appli.todolistfx.accueil;
+import appli.todolistfx.StartApplication;
+import javafx.scene.Node;
+import javafx.stage.Stage;
+import repository.UtilisateurRepository;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,87 +15,75 @@ import java.io.IOException;
 
 import static appli.todolistfx.StartApplication.changeScene;
 
-
 public class InscriptionController {
 
     @FXML
-    private PasswordField confirmerMdp;
+    private PasswordField confirmerMdpField;
 
     @FXML
-    private TextField email;
+    private TextField emailField;
 
     @FXML
     private Button inscriptionButton;
 
     @FXML
-    private Label inscriptionText;
+    private PasswordField mdpField;
 
     @FXML
-    private Label inscriptionText1;
+    private TextField nomField;
 
     @FXML
-    private Label inscriptionText2;
-
-    @FXML
-    private Label inscriptionText3;
-
-    @FXML
-    private Label inscriptionText4;
-
-    @FXML
-    private Label inscriptionText5;
-
-    @FXML
-    private PasswordField motDePasse;
-
-    @FXML
-    private TextField nom;
-
-    @FXML
-    private TextField prenom;
+    private TextField prenomField;
 
     @FXML
     private Button returnButton;
 
     @FXML
-    void afficherConfirmerMdp(ActionEvent event) {
+    private Label affichertext;
+
+    @FXML
+    void insConfirmerMdp(ActionEvent event) {
 
     }
 
     @FXML
-    void afficherMail(ActionEvent event) {
+    void insMail(ActionEvent event) {
 
     }
 
     @FXML
-    void afficherMdp(ActionEvent event) {
+    void insMdp(ActionEvent event) {
 
     }
 
     @FXML
-    void afficherNom(ActionEvent event) {
+    void insNom(ActionEvent event) {
 
     }
 
     @FXML
-    void afficherPrenom(ActionEvent event) {
+    void insPrenom(ActionEvent event) {
 
     }
 
     @FXML
     void inscription(ActionEvent event) {
+        UtilisateurRepository inscrire = new UtilisateurRepository();
+        if (mdpField.getText().equals(confirmerMdpField.getText())) {
+            inscrire.inscription(nomField.getText(), prenomField.getText(), emailField.getText(), mdpField.getText());
+            affichertext.setText("inscription reussi");
 
-    }
-
-    @FXML
-    void mdpOublie(ActionEvent event) {
-
+        }
+        else {
+            affichertext.setText("Les mots de passe ne correspondent pas");
+        }
     }
 
     @FXML
     void retour(ActionEvent event) {
         try {
-            changeScene("loginView.fxml");
+            Stage currentStage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+            StartApplication.changeScene("loginView.fxml", currentStage);
         } catch (IOException e) {
             e.printStackTrace();
         }

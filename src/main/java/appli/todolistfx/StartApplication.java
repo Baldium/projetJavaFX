@@ -18,17 +18,11 @@ public class StartApplication extends Application {
     }
 
 
-    public static void changeScene(String viewAmettre) throws IOException {
-
+    public static void changeScene(String viewAmettre, Stage currentStage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(StartApplication.class.getResource(viewAmettre));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        Stage stage = new Stage();
-        stage.setTitle(viewAmettre);
-        stage.setScene(scene);
-        stage.show();
-
-
-
+        currentStage.setScene(scene);
+        currentStage.show();
     }
 
 

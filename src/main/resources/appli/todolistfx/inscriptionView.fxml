@@ -18,15 +18,16 @@
          <Font size="22.0" />
       </font></Label>
     <Label fx:id="inscriptionText1" layoutX="74.0" layoutY="30.0" text="Nom" />
-    <TextField fx:id="nom" onAction="#afficherNom" />
+    <TextField fx:id="nomField" onAction="#insNom" />
     <Label fx:id="inscriptionText2" layoutX="71.0" layoutY="67.0" text="Prenom" />
-   <TextField fx:id="prenom" layoutX="30.0" layoutY="366.0" onAction="#afficherPrenom" />
+   <TextField fx:id="prenomField" layoutX="30.0" layoutY="366.0" onAction="#insPrenom" />
    <Label fx:id="inscriptionText3" layoutX="84.0" layoutY="149.0" text="Email" />
-   <TextField fx:id="email" layoutX="30.0" layoutY="104.0" onAction="#afficherMail" />
+   <TextField fx:id="emailField" layoutX="30.0" layoutY="104.0" onAction="#insMail" />
    <Label fx:id="inscriptionText4" layoutX="91.0" layoutY="67.0" text="mot de passe" />
-    <PasswordField fx:id="motDePasse" onAction="#afficherMdp" />
+    <PasswordField fx:id="mdpField" onAction="#insMdp" />
    <Label fx:id="inscriptionText5" layoutX="69.0" layoutY="493.0" text="Confirmer le mot de passe" />
-   <PasswordField fx:id="confirmerMdp" layoutX="30.0" layoutY="365.0" onAction="#afficherConfirmerMdp" />
+   <PasswordField fx:id="confirmerMdpField" layoutX="30.0" layoutY="365.0" onAction="#insConfirmerMdp" />
     <Button fx:id="inscriptionButton" layoutX="68.0" layoutY="321.0" mnemonicParsing="false" onAction="#inscription" text="Inscription" />
     <Button fx:id="returnButton" layoutX="68.0" layoutY="276.0" mnemonicParsing="false" onAction="#retour" text="Retour" />
+   <Label fx:id="affichertext" />
 </VBox>

@@ -5,11 +5,13 @@ import appli.todolistfx.StartApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import repository.UtilisateurRepository;
 
 import java.io.IOException;
 
@@ -47,16 +49,30 @@ public class LoginController {
 
     @FXML
     void connexion(ActionEvent event) {
-        System.out.println("Connexion");
+
+        UtilisateurRepository connexion = new UtilisateurRepository();
+
+        if (connexion.connexion(email.getText(), motDePasse.getText()) == true) {
+            try {
+                Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                StartApplication.changeScene("accueilView.fxml", currentStage);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        else {
+            welcomeText.setText("Email ou mot de passe incorrect");
+        }
     }
 
     @FXML
     void inscription(ActionEvent event) {
-       try {
-           changeScene("inscriptionView.fxml");
-       } catch (IOException e) {
-           e.printStackTrace();
-       }
+        try {
+            Stage currentStage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+            StartApplication.changeScene("inscriptionView.fxml", currentStage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
