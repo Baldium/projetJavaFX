@@ -9,6 +9,7 @@ module appli.todolistfx {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires java.sql;
+    requires spring.security.crypto;
 
     opens appli.todolistfx to javafx.fxml;
     exports appli.todolistfx;
