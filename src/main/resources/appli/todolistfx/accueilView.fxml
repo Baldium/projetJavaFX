@@ -5,10 +5,10 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.todolistfx.accueil.AccueilController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.todolistfx.accueil.AccueilController">
    <children>
       <Label layoutX="53.0" layoutY="43.0" text="bienvenue" />
-      <Button layoutX="47.0" layoutY="237.0" mnemonicParsing="false" text="ajouter une liste" />
+      <Button fx:id="ajouterListe" layoutX="47.0" layoutY="237.0" mnemonicParsing="false" onAction="#ajouterUneListe" text="ajouter une liste" />
       <Button layoutX="47.0" layoutY="287.0" mnemonicParsing="false" text="les types" />
       <Button fx:id="deconbutton" layoutX="47.0" layoutY="334.0" mnemonicParsing="false" onAction="#deconnexion" text="deconnexion" />
       <Label layoutX="294.0" layoutY="52.0" text="ensemble des liste créer :" />

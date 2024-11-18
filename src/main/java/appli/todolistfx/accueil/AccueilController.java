@@ -26,6 +26,15 @@ public class AccueilController implements Initializable {
     private Button deconbutton;
 
     @FXML
+    private Button ajouterListe;
+
+    @FXML
+    private TableView<Liste> Tableauliste;
+
+
+
+
+    @FXML
     void deconnexion(ActionEvent event) {
 
         try {
@@ -37,9 +46,16 @@ public class AccueilController implements Initializable {
     }
 
     @FXML
-    private TableView<Liste> Tableauliste;
+    void ajouterUneListe(ActionEvent event) {
+        try {
+            Stage currentStage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+            StartApplication.changeScene("ajouterListe.fxml", currentStage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
-    @Override
+    @FXML
     public void initialize(URL url, ResourceBundle resourceBundle) {
         String[][] colonnes = {
                 {"Id Liste", "idListe" },
